@@ -1,0 +1,4 @@
+segger:
+    kconfig:
+      - CONFIG_PKG_USING_SEGGER_RTT=y
+      - CONFIG_RT_USING_SERIAL_V2=y

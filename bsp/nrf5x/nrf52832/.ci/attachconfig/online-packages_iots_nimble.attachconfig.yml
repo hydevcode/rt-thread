@@ -1,0 +1,45 @@
+nimble:
+    kconfig:
+      - CONFIG_BSP_USING_NIMBLE=y
+# ------ NimBLE Sample CI ------
+nimble.advertiser:
+    kconfig:
+      - CONFIG_BSP_USING_NIMBLE=y
+      - CONFIG_PKG_NIMBLE_SAMPLE_ADVERTISER=y
+nimble.beacon:
+    kconfig:
+      - CONFIG_BSP_USING_NIMBLE=y
+      - CONFIG_PKG_NIMBLE_SAMPLE_BEACON=y
+nimble.blecsc:
+    kconfig:
+      - CONFIG_BSP_USING_NIMBLE=y
+      - CONFIG_PKG_NIMBLE_SAMPLE_BLECSC=y
+nimble.central:    
+    kconfig:
+      - CONFIG_BSP_USING_NIMBLE=y
+      - CONFIG_PKG_NIMBLE_SAMPLE_CENTRAL=y
+nimble.ext.advertiser:   
+    kconfig:
+      - CONFIG_BSP_USING_NIMBLE=y
+      - CONFIG_PKG_NIMBLE_SAMPLE_EXT_ADVERTISER=y
+      - CONFIG_PKG_NIMBLE_EXT_ADV=y
+nimble.mesh: 
+    kconfig:
+      - CONFIG_BSP_USING_NIMBLE=y
+      - CONFIG_PKG_NIMBLE_SAMPLE_BLEMESH=y
+nimble.per.hr:
+    kconfig:
+      - CONFIG_BSP_USING_NIMBLE=y
+      - CONFIG_PKG_NIMBLE_SAMPLE_PER_HR=y
+nimble.peripheral:
+    kconfig:
+      - CONFIG_BSP_USING_NIMBLE=y
+      - CONFIG_PKG_NIMBLE_SAMPLE_PERIPHERAL=y
+nimble.btshell:
+    kconfig:
+      - CONFIG_BSP_USING_NIMBLE=y
+      - CONFIG_PKG_NIMBLE_SAMPLE_BTSHELL=y
+nimble.uart:
+    kconfig:
+      - CONFIG_BSP_USING_NIMBLE=y
+      - CONFIG_PKG_NIMBLE_SAMPLE_BLEUART=y
