@@ -1,6 +1,12 @@
 name: Comment on the pull request
 
 on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
   workflow_dispatch:
   workflow_run:
     workflows: ["Auto Review Assistant"]
