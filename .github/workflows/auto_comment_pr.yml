@@ -73,10 +73,11 @@ jobs:
       - name: Post/Update comment
         id: post_comment
         run: |
+          cat ./pr/NR > pr_num
           # 查找现有的 bot 评论
           existing_comment=$(curl -s \
             -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/issues/$(cat ./pr/NR)/comments" | \
+            "https://api.github.com/repos/${{ github.repository }}/issues/$(pr_num)/comments" | \
             jq -r '.[] | select(.user.login == "github-actions[bot]") | {id: .id, body: .body} | @base64')
           
           if [[ -n "$existing_comment" ]]; then
@@ -93,7 +94,7 @@ jobs:
             response=$(curl -s -X POST \
               -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
               -d "$(jq -n --arg body "$(cat ./pr/review_data.md)" '{body: $body}')" \
-              "https://api.github.com/repos/${{ github.repository }}/issues/$(cat ./pr/NR)/comments")
+              "https://api.github.com/repos/${{ github.repository }}/issues/$(pr_num)/comments")
           fi
       # - name: 'Comment on PR'
       #   uses: actions/github-script@v7
