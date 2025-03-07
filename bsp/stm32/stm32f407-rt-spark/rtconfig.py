@@ -5,7 +5,7 @@ ARCH='arm'
 CPU='cortex-m4'
 CROSS_TOOL='gcc'
 
-# bsp lib config
+# bsp lib configasdasd
 BSP_LIBRARY_TYPE = None
 
 if os.getenv('RTT_CC'):
