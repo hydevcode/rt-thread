@@ -1,6 +1,6 @@
 import os
 
-# toolchains options
+# toolchains optionsasd
 ARCH='arm'
 CPU='cortex-m4'
 CROSS_TOOL='gcc'
